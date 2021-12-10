@@ -35,7 +35,7 @@ class TestShape(unittest.TestCase):
 
 
     def test_round_to_square(self):
-
+        self.assertEqual(shape.round_to_square(self.c),None)
         self.assertEqual(type(shape.round_to_square(self.a)),Rectangle)
         self.assertEqual(type(shape.round_to_square(self.b)),Rectangle)
         self.assertEqual(type(shape.round_to_square(self.d)),Rectangle)
@@ -43,7 +43,7 @@ class TestShape(unittest.TestCase):
         self.assertAlmostEqual(shape.round_to_square(self.b).area,math.pi*36)
 
     def test_square_to_round(self):
-
+        self.assertEqual(shape.square_to_round(self.a),None)
         self.assertEqual(type(shape.square_to_round(self.c)),Round)
         self.assertEqual(type(shape.square_to_round(self.e)),Round)
         self.assertEqual(type(shape.square_to_round(self.f)),Round)
@@ -52,6 +52,9 @@ class TestShape(unittest.TestCase):
 
     def test_round_to_rect(self):
 
+        self.assertEqual(shape.round_to_rect(self.c,1),None)
+        self.assertEqual(shape.round_to_rect(self.a,0),None)
+        self.assertEqual(shape.round_to_rect(self.a,-4),None)
         self.assertEqual(type(shape.round_to_rect(self.a,2)),Rectangle)
         self.assertEqual(type(shape.round_to_rect(self.b,2)),Rectangle)
         self.assertEqual(type(shape.round_to_rect(self.d,2)),Rectangle)
