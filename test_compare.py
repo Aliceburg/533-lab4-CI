@@ -46,6 +46,7 @@ class TestCompare(unittest.TestCase):
         self.assertEqual(compare.is_same(self.b,self.c),False)
         self.assertEqual(compare.is_same(self.b,self.d),False)
         self.assertEqual(compare.is_same(self.a,self.e),None)
+        self.assertEqual(compare.is_same(self.e,self.b),None)
     def test_big_area(self):
         self.assertEqual(compare.big_area(self.a,self.b),self.b)
         self.assertEqual(compare.big_area(self.a,self.d),None)
@@ -53,3 +54,4 @@ class TestCompare(unittest.TestCase):
         self.assertEqual(compare.big_area(self.c,self.d),self.d)
         self.assertEqual(compare.big_area(self.b,self.d),self.b)
         self.assertEqual(compare.big_area(self.e,self.d),None)
+        self.assertEqual(compare.big_area(self.c,self.e),None)
