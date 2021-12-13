@@ -13,4 +13,4 @@ https://pypi.org/project/geometryYLS/0.2/
 
 ## explain video
 
-The video is also on Youtube, you can access the video from the link: https://www.youtube.com/watch?v=PGeRgEXV8fs
+The video is on Youtube, you can access the video from the link: https://www.youtube.com/watch?v=PGeRgEXV8fs
