@@ -1,5 +1,9 @@
 from .graphic import Graphic 
 import math
+
+class InputError(Exception):
+    pass
+
 class Round(Graphic):
     def __init__(self,radius):
         self.radius = radius
@@ -7,6 +11,12 @@ class Round(Graphic):
         self.area = radius**2*math.pi
         
     def cal_perimeter(self):
+        try:
+            if self.radius <= 0:
+                raise InputError
+        except InputError:
+            print("Radius is negative!")
+            return None
         return 2*self.radius*math.pi
     
     def cal_area(self):
