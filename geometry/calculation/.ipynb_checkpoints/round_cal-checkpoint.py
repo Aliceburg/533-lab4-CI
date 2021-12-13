@@ -15,7 +15,7 @@ class Round(Graphic):
             if self.radius <= 0:
                 raise InputError
         except InputError:
-            print("Radius is negative!")
+            print("Radius should be positive!")
             return None
         return 2*self.radius*math.pi
     
